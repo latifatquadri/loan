@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaMoneyBill } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
 import { FaHistory } from "react-icons/fa";
 import LoanModal from "./LoanModal";
 import welcomeLoan from "../assets/images/welcomeLoan.jpeg";
@@ -15,9 +14,9 @@ function loan() {
   return (
     <div>
       <div className="container mx-auto px-4">
-        <div className="flex justify-between">
+        <div className="block ml-4 lg:flex lg:justify-between">
           <div>
-            <div className="flex text-blue-500 gap-3 items-center text-3xl mb-4 font-bold p-4">
+            <div className="flex text-blue-600 gap-3 items-center text-3xl font-bold p-4">
               <FaMoneyBill className="text-3xl inline-block align-middle" />
               <p className="text-2xl inline-block align-middle">Loan</p>
             </div>
@@ -31,8 +30,8 @@ function loan() {
             </button>
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-2">
-          <img className="rounded-2xl" src={welcomeLoan} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <img className="rounded-2xl hidden lg:visible" src={welcomeLoan} />
           <div className="h-auto px-4 grid gap-4 mt-2 md:grid-cols-2 lg:grid-cols-1">
             <div className="bg-blue-600 shadow-lg shadow-blue-800 p-4 rounded-2xl">
               <p className="text-2xl lg:text-3xl font-bold text-white">
@@ -66,7 +65,7 @@ function loan() {
           </div>
         </div>
         <button
-          className="bg-blue-700 text-white font-semibold p-8 my-4 lg:text-xl lg:p-4 cursor-pointer rounded-2xl shadow-2xl shadow-blue-800 justify-center items-center "
+          className="bg-blue-700 text-white font-semibold p-4 lg:p-8 my-4 ml-4 lg:text-xl cursor-pointer rounded-2xl shadow-2xl shadow-blue-800 justify-center items-center "
           onClick={() => setModalOpen(true)}
         >
           Request for Loan
